@@ -12,11 +12,12 @@
     <ol>
       <% for (let album of albumsArray) { %>
       <li>
-        <a href="/albums/<%= album.id %>"
-          ><%= album.name %> - <%= album.artist %></a
-        >
+        <a href="/albums/<%= album.id %>">
+          <%= album.name %> - <%= album.artist %>
+        </a>
       </li>
       <% } %>
+      <a href="/albums/new">Add New Album</a>
     </ol>
   </body>
 </html>
