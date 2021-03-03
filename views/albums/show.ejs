@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Album</title>
+  </head>
+  <body>
+    <li>ID: <%= album.id %></li>
+    <li>Name: <%= album.name %></li>
+    <li>Artist: <%= album.artist %></li>
+    <li>Tracks:</li>
+    <ul>
+      <% for (let track of album.tracks) { %>
+      <li>
+        <a href="/albums/<%= album.id %>/<%= track.id %>"><%= track.id %></a>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
